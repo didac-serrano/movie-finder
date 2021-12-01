@@ -7,17 +7,14 @@
 
 import Foundation
 
-typealias APIDataManagerMovieTitleResult = (Result<[MovieTitleEntity], Error>)
-typealias APIDataManagerMovieCompleteResult = (Result<[MovieCompleteEntity], Error>)
-//typealias APIDataManagerMovieDetailResult = (Result<MovieDetailEntity, Error>)
+typealias APIDataManagerMovieResult = (Result<[MovieEntity], Error>)
+typealias APIDataManagerMovieDetailResult = (Result<MovieDetailEntity, Error>)
 
-typealias APIDataManagerMovieTitleResultBlock = (Result<[MovieTitleEntity], Error>) -> Void
-typealias APIDataManagerMovieCompleteResultBlock = (Result<[MovieCompleteEntity], Error>) -> Void
-//typealias APIDataManagerMovieDetailResultBlock = (Result<MovieDetailEntity, Error>) -> Void
+typealias APIDataManagerMovieResultBlock = (Result<[MovieEntity], Error>) -> Void
+typealias APIDataManagerMovieDetailResultBlock = (Result<MovieDetailEntity, Error>) -> Void
 
 protocol SearchAPIDataManagerProtocol: class {
     
-    func requestMoviesTitle(input: String, resultBlock: @escaping APIDataManagerMovieTitleResultBlock)
-    func requestMoviesComplete(input: String, resultBlock: @escaping APIDataManagerMovieCompleteResultBlock)
-//    func requestMoviesDetail(input: String, resultBlock: @escaping APIDataManagerMovieDetailResultBlock)
+    func requestMoviesTitle(input: String, resultBlock: @escaping APIDataManagerMovieResultBlock)
+    func requestMovieDetail(movieId: String, resultBlock: @escaping APIDataManagerMovieDetailResultBlock)
 }

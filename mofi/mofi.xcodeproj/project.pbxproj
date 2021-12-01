@@ -12,11 +12,18 @@
 		2B448CAF27543FDB008A9DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B448CAD27543FDB008A9DD9 /* LaunchScreen.storyboard */; };
 		2BED959B27554E3C001BED0B /* SearchAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED959A27554E3C001BED0B /* SearchAPIDataManager.swift */; };
 		2BED95A027555C4D001BED0B /* URLDataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED959F27555C4D001BED0B /* URLDataRetriever.swift */; };
-		2BED95A827556152001BED0B /* BaseWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95A727556152001BED0B /* BaseWireframeProtocol.swift */; };
 		2BED95AC2755623C001BED0B /* ViewDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95AB2755623C001BED0B /* ViewDispatcher.swift */; };
 		2BED95AF275562E3001BED0B /* SearchAPIDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95AE275562E3001BED0B /* SearchAPIDataManagerProtocol.swift */; };
-		2BED95B327556E42001BED0B /* MovieTitleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95B227556E42001BED0B /* MovieTitleEntity.swift */; };
-		2BED95B727557E7B001BED0B /* MovieCompleteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95B627557E7B001BED0B /* MovieCompleteEntity.swift */; };
+		2BED95B727557E7B001BED0B /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95B627557E7B001BED0B /* MovieEntity.swift */; };
+		2BED95BA275589F8001BED0B /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95B9275589F8001BED0B /* SearchInteractor.swift */; };
+		2BED95BF27559449001BED0B /* MovieDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95BE27559449001BED0B /* MovieDetailEntity.swift */; };
+		2BED95C22756981C001BED0B /* SearchInteractorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95C12756981C001BED0B /* SearchInteractorInputProtocol.swift */; };
+		2BED95C827569E01001BED0B /* SearchInteractorOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95C727569E01001BED0B /* SearchInteractorOutputProtocol.swift */; };
+		2BED95CD2756B473001BED0B /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95CC2756B473001BED0B /* SearchPresenter.swift */; };
+		2BED95D02756B4A6001BED0B /* SearchPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95CF2756B4A6001BED0B /* SearchPresenterProtocol.swift */; };
+		2BED95D32756C7D3001BED0B /* SearchViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95D22756C7D3001BED0B /* SearchViewProtocol.swift */; };
+		2BED95D62756C9E9001BED0B /* SearchWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95D52756C9E9001BED0B /* SearchWireframeProtocol.swift */; };
+		2BED95DA2756D87F001BED0B /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95D92756D87F001BED0B /* SearchWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +34,18 @@
 		2B448CB027543FDB008A9DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BED959A27554E3C001BED0B /* SearchAPIDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIDataManager.swift; sourceTree = "<group>"; };
 		2BED959F27555C4D001BED0B /* URLDataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDataRetriever.swift; sourceTree = "<group>"; };
-		2BED95A727556152001BED0B /* BaseWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframeProtocol.swift; sourceTree = "<group>"; };
 		2BED95AB2755623C001BED0B /* ViewDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDispatcher.swift; sourceTree = "<group>"; };
 		2BED95AE275562E3001BED0B /* SearchAPIDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIDataManagerProtocol.swift; sourceTree = "<group>"; };
-		2BED95B227556E42001BED0B /* MovieTitleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTitleEntity.swift; sourceTree = "<group>"; };
-		2BED95B627557E7B001BED0B /* MovieCompleteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCompleteEntity.swift; sourceTree = "<group>"; };
+		2BED95B627557E7B001BED0B /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
+		2BED95B9275589F8001BED0B /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		2BED95BE27559449001BED0B /* MovieDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailEntity.swift; sourceTree = "<group>"; };
+		2BED95C12756981C001BED0B /* SearchInteractorInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorInputProtocol.swift; sourceTree = "<group>"; };
+		2BED95C727569E01001BED0B /* SearchInteractorOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorOutputProtocol.swift; sourceTree = "<group>"; };
+		2BED95CC2756B473001BED0B /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		2BED95CF2756B4A6001BED0B /* SearchPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterProtocol.swift; sourceTree = "<group>"; };
+		2BED95D22756C7D3001BED0B /* SearchViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewProtocol.swift; sourceTree = "<group>"; };
+		2BED95D52756C9E9001BED0B /* SearchWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframeProtocol.swift; sourceTree = "<group>"; };
+		2BED95D92756D87F001BED0B /* SearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +128,7 @@
 		2BED9595275548B7001BED0B /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				2BED95B9275589F8001BED0B /* SearchInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -121,6 +136,7 @@
 		2BED9596275548BF001BED0B /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				2BED95CC2756B473001BED0B /* SearchPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -128,6 +144,11 @@
 		2BED9597275548C8001BED0B /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				2BED95D52756C9E9001BED0B /* SearchWireframeProtocol.swift */,
+				2BED95D22756C7D3001BED0B /* SearchViewProtocol.swift */,
+				2BED95CF2756B4A6001BED0B /* SearchPresenterProtocol.swift */,
+				2BED95C727569E01001BED0B /* SearchInteractorOutputProtocol.swift */,
+				2BED95C12756981C001BED0B /* SearchInteractorInputProtocol.swift */,
 				2BED95AE275562E3001BED0B /* SearchAPIDataManagerProtocol.swift */,
 			);
 			path = Protocol;
@@ -143,6 +164,7 @@
 		2BED9599275548DB001BED0B /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				2BED95D92756D87F001BED0B /* SearchWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -152,7 +174,6 @@
 			children = (
 				2BED95B12755675C001BED0B /* Entities */,
 				2BED95AA275561FD001BED0B /* Dispatcher */,
-				2BED95A627556127001BED0B /* Wireframe */,
 				2BED959E27555C19001BED0B /* DataRetriever */,
 			);
 			path = Common;
@@ -166,14 +187,6 @@
 			path = DataRetriever;
 			sourceTree = "<group>";
 		};
-		2BED95A627556127001BED0B /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-				2BED95A727556152001BED0B /* BaseWireframeProtocol.swift */,
-			);
-			path = Wireframe;
-			sourceTree = "<group>";
-		};
 		2BED95AA275561FD001BED0B /* Dispatcher */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +198,8 @@
 		2BED95B12755675C001BED0B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				2BED95B227556E42001BED0B /* MovieTitleEntity.swift */,
-				2BED95B627557E7B001BED0B /* MovieCompleteEntity.swift */,
+				2BED95B627557E7B001BED0B /* MovieEntity.swift */,
+				2BED95BE27559449001BED0B /* MovieDetailEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -260,13 +273,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BED95C827569E01001BED0B /* SearchInteractorOutputProtocol.swift in Sources */,
 				2BED95AF275562E3001BED0B /* SearchAPIDataManagerProtocol.swift in Sources */,
+				2BED95DA2756D87F001BED0B /* SearchWireframe.swift in Sources */,
+				2BED95CD2756B473001BED0B /* SearchPresenter.swift in Sources */,
 				2BED95A027555C4D001BED0B /* URLDataRetriever.swift in Sources */,
-				2BED95B727557E7B001BED0B /* MovieCompleteEntity.swift in Sources */,
-				2BED95A827556152001BED0B /* BaseWireframeProtocol.swift in Sources */,
+				2BED95B727557E7B001BED0B /* MovieEntity.swift in Sources */,
+				2BED95D02756B4A6001BED0B /* SearchPresenterProtocol.swift in Sources */,
+				2BED95BA275589F8001BED0B /* SearchInteractor.swift in Sources */,
+				2BED95D62756C9E9001BED0B /* SearchWireframeProtocol.swift in Sources */,
+				2BED95BF27559449001BED0B /* MovieDetailEntity.swift in Sources */,
 				2BED959B27554E3C001BED0B /* SearchAPIDataManager.swift in Sources */,
 				2B448CA327543FD5008A9DD9 /* AppDelegate.swift in Sources */,
-				2BED95B327556E42001BED0B /* MovieTitleEntity.swift in Sources */,
+				2BED95C22756981C001BED0B /* SearchInteractorInputProtocol.swift in Sources */,
+				2BED95D32756C7D3001BED0B /* SearchViewProtocol.swift in Sources */,
 				2BED95AC2755623C001BED0B /* ViewDispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
