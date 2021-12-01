@@ -24,6 +24,10 @@
 		2BED95D32756C7D3001BED0B /* SearchViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95D22756C7D3001BED0B /* SearchViewProtocol.swift */; };
 		2BED95D62756C9E9001BED0B /* SearchWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95D52756C9E9001BED0B /* SearchWireframeProtocol.swift */; };
 		2BED95DA2756D87F001BED0B /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95D92756D87F001BED0B /* SearchWireframe.swift */; };
+		2BED95E92757D63F001BED0B /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BED95E82757D63F001BED0B /* SearchView.xib */; };
+		2BED95ED2757DAF1001BED0B /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BED95EC2757DAF1001BED0B /* MovieTableViewCell.xib */; };
+		2BED95F02757DBE0001BED0B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95EF2757DBE0001BED0B /* MovieTableViewCell.swift */; };
+		2BED95F42757F451001BED0B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95F32757F451001BED0B /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		2BED95D22756C7D3001BED0B /* SearchViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewProtocol.swift; sourceTree = "<group>"; };
 		2BED95D52756C9E9001BED0B /* SearchWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframeProtocol.swift; sourceTree = "<group>"; };
 		2BED95D92756D87F001BED0B /* SearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
+		2BED95E82757D63F001BED0B /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		2BED95EC2757DAF1001BED0B /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		2BED95EF2757DBE0001BED0B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		2BED95F32757F451001BED0B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,9 @@
 		2BED9598275548D3001BED0B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BED95EB2757DACA001BED0B /* Cell */,
+				2BED95F32757F451001BED0B /* SearchViewController.swift */,
+				2BED95E82757D63F001BED0B /* SearchView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +213,15 @@
 				2BED95BE27559449001BED0B /* MovieDetailEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		2BED95EB2757DACA001BED0B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2BED95EF2757DBE0001BED0B /* MovieTableViewCell.swift */,
+				2BED95EC2757DAF1001BED0B /* MovieTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +283,8 @@
 			files = (
 				2B448CAF27543FDB008A9DD9 /* LaunchScreen.storyboard in Resources */,
 				2B448CAC27543FDB008A9DD9 /* Assets.xcassets in Resources */,
+				2BED95ED2757DAF1001BED0B /* MovieTableViewCell.xib in Resources */,
+				2BED95E92757D63F001BED0B /* SearchView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +301,8 @@
 				2BED95CD2756B473001BED0B /* SearchPresenter.swift in Sources */,
 				2BED95A027555C4D001BED0B /* URLDataRetriever.swift in Sources */,
 				2BED95B727557E7B001BED0B /* MovieEntity.swift in Sources */,
+				2BED95F42757F451001BED0B /* SearchViewController.swift in Sources */,
+				2BED95F02757DBE0001BED0B /* MovieTableViewCell.swift in Sources */,
 				2BED95D02756B4A6001BED0B /* SearchPresenterProtocol.swift in Sources */,
 				2BED95BA275589F8001BED0B /* SearchInteractor.swift in Sources */,
 				2BED95D62756C9E9001BED0B /* SearchWireframeProtocol.swift in Sources */,

@@ -9,8 +9,7 @@ import Foundation
 
 enum SearchJob {
     case requestMovies(text: String)
-    case requestMovieDetail
-    case storeSelectedMovie(index: Int)
+    case requestMovieDetail(index: Int)
 }
 
 protocol SearchInteractorInputProtocol: class {

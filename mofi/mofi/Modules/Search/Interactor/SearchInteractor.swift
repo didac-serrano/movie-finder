@@ -20,8 +20,7 @@ class SearchInteractor: SearchInteractorInputProtocol {
     func perform(_ job: SearchJob) {
         switch job {
         case .requestMovies(let text): fetchMovies(text: text)
-        case .storeSelectedMovie(let index): storeMovie(index: index)
-        case .requestMovieDetail: fetchMovieDetail()
+        case .requestMovieDetail(let index): fetchMovieDetail(index: index)
         }
     }
     
@@ -32,24 +31,20 @@ class SearchInteractor: SearchInteractorInputProtocol {
             case .success(let movies):
                 self.movies = movies
                 self.handleMovies(result: movies)
-            case .failure(let error): self.handleError(error: error)
+            case .failure(let error):
+                self.handleError(error: error)
             }
         }
     }
     
-    private func fetchMovieDetail() {
-        guard let id = selectedMovie?.id else { return }
+    private func fetchMovieDetail(index: Int) {
+        guard let id = movies?[index].id else { return }
         self.dataManager?.requestMovieDetail(movieId: id) { resultBlock in
             switch resultBlock {
             case .success(let detail): self.handleDetail(result: detail)
             case .failure(let error): self.handleError(error: error)
             }
         }
-    }
-    
-    private func storeMovie(index: Int) {
-        guard let movie = movies?[index] else { return }
-        self.selectedMovie = movie
     }
         
     private func handleMovies(result: [MovieEntity]) {

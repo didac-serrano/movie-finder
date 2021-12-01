@@ -17,13 +17,11 @@ class SearchPresenter: SearchPresenterProtocol, SearchInteractorOutputProtocol {
     
     func perform(action: SearchAction) {
         switch action {
-        case .searchPressed(let input):
+        case .textEntered(let input):
             interactor?.perform(.requestMovies(text: input))
         case .itemSelected(let index):
-            interactor?.perform(.storeSelectedMovie(index: index))
+            interactor?.perform(.requestMovieDetail(index: index))
             wireframe?.navigate(to: .detail)
-        case .detailRequested:
-            interactor?.perform(.requestMovieDetail)
         }
     }
     

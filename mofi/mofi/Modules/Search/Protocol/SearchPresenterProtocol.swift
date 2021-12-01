@@ -8,9 +8,8 @@
 import Foundation
 
 enum SearchAction {
-    case searchPressed(text: String)
+    case textEntered(text: String)
     case itemSelected(index: Int)
-    case detailRequested
 }
 
 protocol SearchPresenterProtocol: class {

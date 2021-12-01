@@ -22,7 +22,7 @@ struct MovieEntity: Decodable {
     }
     
     var title: String
-    var year: Int
+    var year: String
     var id: String
     var type: MediaType
     var picture: String
