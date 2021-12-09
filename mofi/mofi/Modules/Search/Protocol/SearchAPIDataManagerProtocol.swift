@@ -7,10 +7,10 @@
 
 import Foundation
 
-typealias APIDataManagerMovieResult = (Result<[MovieEntity], Error>)
+typealias APIDataManagerMovieResult = (Result<SearchEntity, Error>)
 typealias APIDataManagerMovieDetailResult = (Result<MovieDetailEntity, Error>)
 
-typealias APIDataManagerMovieResultBlock = (Result<[MovieEntity], Error>) -> Void
+typealias APIDataManagerMovieResultBlock = (Result<SearchEntity, Error>) -> Void
 typealias APIDataManagerMovieDetailResultBlock = (Result<MovieDetailEntity, Error>) -> Void
 
 protocol SearchAPIDataManagerProtocol: class {

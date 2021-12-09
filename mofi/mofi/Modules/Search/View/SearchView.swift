@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  SearchView.swift
 //  mofi
 //
 //  Created by Dídac Serrano i Segarra on 01/12/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SearchViewProtocol {
+class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, SearchViewProtocol {
 
     // MARK: - Properties
     var presenter: SearchPresenterProtocol?
@@ -64,7 +64,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as! MovieTableViewCell
         
         let movie = self.movies[indexPath.row]
-//        cell.photo?.kf.setImage(with: URL(string: room.photos[0].url_small!))
+//        cell.picture?.kf.setImage(with: URL(string: room.photos[0].url_small!))
+        cell.picture?.tintColor = .systemIndigo
         cell.title?.text = movie.title
         cell.year?.text = movie.year
         cell.type?.text = movie.type.rawValue
@@ -90,9 +91,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 }
 
 // MARK: - Delegate
-extension SearchViewController: UISearchBarDelegate {
+extension SearchView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.count < 4 { return }
+        // omdbapi does exact matching and needs +3 characters input
+        // for testing purposes i use "seven"
+        if searchText.count < 5 { return }
         self.presenter?.perform(action: .textEntered(text: searchText))
     }
 }

@@ -7,9 +7,9 @@
 
 import Foundation
     
-struct MovieEntity: Decodable {
+struct MovieEntity: Decodable, Encodable {
     
-    enum MediaType: String, Decodable {
+    enum MediaType: String, Decodable, Encodable {
         case movie, series, episode
     }
     
@@ -25,6 +25,6 @@ struct MovieEntity: Decodable {
     var year: String
     var id: String
     var type: MediaType
-    var picture: String
+    var picture: String?
 }
 

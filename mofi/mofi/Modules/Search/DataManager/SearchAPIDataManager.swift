@@ -28,5 +28,4 @@ final class SearchAPIDataManager: SearchAPIDataManagerProtocol {
             resultBlock(result)
         }
     }
-    
 }

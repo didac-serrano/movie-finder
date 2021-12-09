@@ -16,7 +16,7 @@ class SearchWireframe: SearchWireframeProtocol {
     
     init() {
         self.presenter = SearchPresenter()
-        let search = SearchViewController()
+        let search = SearchView()
         let interactor = SearchInteractor()
         search.presenter = presenter
         self.presenter?.search = search

@@ -28,9 +28,9 @@ class SearchInteractor: SearchInteractorInputProtocol {
         let clean = text.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
         self.dataManager?.requestMoviesTitle(input: clean) { resultBlock in
             switch resultBlock {
-            case .success(let movies):
-                self.movies = movies
-                self.handleMovies(result: movies)
+            case .success(let search):
+                self.movies = search.movies
+                self.handleMovies(result: search.movies)
             case .failure(let error):
                 self.handleError(error: error)
             }
@@ -48,7 +48,7 @@ class SearchInteractor: SearchInteractorInputProtocol {
     }
         
     private func handleMovies(result: [MovieEntity]) {
-//        self.presenter?.handle(.moviesSuccess(result))
+        self.presenter?.handle(.moviesSuccess(result))
     }
     
     private func handleDetail(result: MovieDetailEntity) {

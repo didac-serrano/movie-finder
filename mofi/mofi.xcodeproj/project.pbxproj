@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0978E3276164FF007FFF65 /* SearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0978E2276164FF007FFF65 /* SearchEntity.swift */; };
 		2B448CA327543FD5008A9DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B448CA227543FD5008A9DD9 /* AppDelegate.swift */; };
 		2B448CAC27543FDB008A9DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B448CAB27543FDB008A9DD9 /* Assets.xcassets */; };
 		2B448CAF27543FDB008A9DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B448CAD27543FDB008A9DD9 /* LaunchScreen.storyboard */; };
@@ -27,10 +28,11 @@
 		2BED95E92757D63F001BED0B /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BED95E82757D63F001BED0B /* SearchView.xib */; };
 		2BED95ED2757DAF1001BED0B /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BED95EC2757DAF1001BED0B /* MovieTableViewCell.xib */; };
 		2BED95F02757DBE0001BED0B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95EF2757DBE0001BED0B /* MovieTableViewCell.swift */; };
-		2BED95F42757F451001BED0B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95F32757F451001BED0B /* SearchViewController.swift */; };
+		2BED95F42757F451001BED0B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED95F32757F451001BED0B /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B0978E2276164FF007FFF65 /* SearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEntity.swift; sourceTree = "<group>"; };
 		2B448C9F27543FD5008A9DD9 /* mofi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mofi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B448CA227543FD5008A9DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B448CAB27543FDB008A9DD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		2BED95E82757D63F001BED0B /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		2BED95EC2757DAF1001BED0B /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		2BED95EF2757DBE0001BED0B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		2BED95F32757F451001BED0B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2BED95F32757F451001BED0B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				2BED95EB2757DACA001BED0B /* Cell */,
-				2BED95F32757F451001BED0B /* SearchViewController.swift */,
+				2BED95F32757F451001BED0B /* SearchView.swift */,
 				2BED95E82757D63F001BED0B /* SearchView.xib */,
 			);
 			path = View;
@@ -209,6 +211,7 @@
 		2BED95B12755675C001BED0B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				2B0978E2276164FF007FFF65 /* SearchEntity.swift */,
 				2BED95B627557E7B001BED0B /* MovieEntity.swift */,
 				2BED95BE27559449001BED0B /* MovieDetailEntity.swift */,
 			);
@@ -299,9 +302,10 @@
 				2BED95AF275562E3001BED0B /* SearchAPIDataManagerProtocol.swift in Sources */,
 				2BED95DA2756D87F001BED0B /* SearchWireframe.swift in Sources */,
 				2BED95CD2756B473001BED0B /* SearchPresenter.swift in Sources */,
+				2B0978E3276164FF007FFF65 /* SearchEntity.swift in Sources */,
 				2BED95A027555C4D001BED0B /* URLDataRetriever.swift in Sources */,
 				2BED95B727557E7B001BED0B /* MovieEntity.swift in Sources */,
-				2BED95F42757F451001BED0B /* SearchViewController.swift in Sources */,
+				2BED95F42757F451001BED0B /* SearchView.swift in Sources */,
 				2BED95F02757DBE0001BED0B /* MovieTableViewCell.swift in Sources */,
 				2BED95D02756B4A6001BED0B /* SearchPresenterProtocol.swift in Sources */,
 				2BED95BA275589F8001BED0B /* SearchInteractor.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieDetailEntity: Decodable {
+struct MovieDetailEntity: Decodable, Encodable {
     
     enum CodingKeys: String, CodingKey {
         case title = "Title"
@@ -21,7 +21,7 @@ struct MovieDetailEntity: Decodable {
     }
     
     var title: String
-    var picture: String
+    var picture: String?
     var duration: String
     var genre: String
     var release: String
