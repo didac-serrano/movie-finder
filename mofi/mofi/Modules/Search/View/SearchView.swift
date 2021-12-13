@@ -32,9 +32,9 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     }
     
     func tableSettings() {
-        self.tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")
+        self.tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
         self.tableView.allowsSelection = true
-        self.tableView.rowHeight = 292
+        self.tableView.rowHeight = 282
         self.tableView.separatorStyle = .none
     }
 
@@ -61,14 +61,12 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     }
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as! MovieTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
         let movie = self.movies[indexPath.row]
-//        cell.picture?.kf.setImage(with: URL(string: room.photos[0].url_small!))
-        cell.picture?.tintColor = .systemIndigo
+//        cell.picture?.kf.setImage(with: URL(string: movie.picture!))
+        cell.picture?.tintColor = .systemIndigo  // URL not implemented
         cell.title?.text = movie.title
-        cell.year?.text = movie.year
-        cell.type?.text = movie.type.rawValue
+        cell.info?.text = movie.getInfo()
         cell.contentView.backgroundColor = .white
         return cell
     }

@@ -26,5 +26,9 @@ struct MovieEntity: Decodable, Encodable {
     var id: String
     var type: MediaType
     var picture: String?
+    
+    func getInfo() -> String {
+        return type.rawValue.capitalized + " from " + year
+    }
 }
 
