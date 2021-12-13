@@ -16,5 +16,6 @@ typealias APIDataManagerMovieDetailResultBlock = (Result<MovieDetailEntity, Erro
 protocol SearchAPIDataManagerProtocol: class {
     
     func requestMoviesTitle(input: String, resultBlock: @escaping APIDataManagerMovieResultBlock)
+    func requestMoviesPage(input: String, page: Int, resultBlock: @escaping APIDataManagerMovieResultBlock)
     func requestMovieDetail(movieId: String, resultBlock: @escaping APIDataManagerMovieDetailResultBlock)
 }

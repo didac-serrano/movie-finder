@@ -9,6 +9,7 @@ import Foundation
 
 enum SearchAction {
     case textEntered(text: String)
+    case scrollTo(index: Int)
     case itemSelected(index: Int)
 }
 

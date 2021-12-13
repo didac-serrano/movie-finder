@@ -68,6 +68,8 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         cell.title?.text = movie.title
         cell.info?.text = movie.getInfo()
         cell.contentView.backgroundColor = .white
+        
+        presenter?.perform(action: .scrollTo(index: indexPath.row))
         return cell
     }
     

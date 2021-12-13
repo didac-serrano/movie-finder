@@ -21,6 +21,14 @@ final class SearchAPIDataManager: SearchAPIDataManagerProtocol {
         }
     }
     
+    //user scrolls
+    func requestMoviesPage(input: String, page: Int, resultBlock: @escaping APIDataManagerMovieResultBlock) {
+        url = url + "s=" + input + "page=" + String(page) + apikey
+        self.dataRetriever.retrieve(url: url) { (result: APIDataManagerMovieResult) in
+            resultBlock(result)
+        }
+    }
+    
     //user chooses one movie from the list
     func requestMovieDetail(movieId: String, resultBlock: @escaping APIDataManagerMovieDetailResultBlock) {
         url = url + "i=" + movieId + apikey

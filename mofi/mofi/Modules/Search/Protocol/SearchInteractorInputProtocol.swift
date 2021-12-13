@@ -9,6 +9,7 @@ import Foundation
 
 enum SearchJob {
     case requestMovies(text: String)
+    case requestPage(index: Int)
     case requestMovieDetail(index: Int)
 }
 

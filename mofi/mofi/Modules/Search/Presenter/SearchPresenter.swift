@@ -19,6 +19,8 @@ class SearchPresenter: SearchPresenterProtocol, SearchInteractorOutputProtocol {
         switch action {
         case .textEntered(let input):
             interactor?.perform(.requestMovies(text: input))
+        case .scrollTo(let index):
+            interactor?.perform(.requestPage(index: index))
         case .itemSelected(let index):
             interactor?.perform(.requestMovieDetail(index: index))
             wireframe?.navigate(to: .detail)
