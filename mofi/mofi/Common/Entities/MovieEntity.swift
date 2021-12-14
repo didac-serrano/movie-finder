@@ -31,4 +31,3 @@ struct MovieEntity: Decodable, Encodable {
         return type.rawValue.capitalized + " from " + year
     }
 }
-
