@@ -27,6 +27,7 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     // MARK: - Setups
     func searchBarSettings() {
         self.searchBar.searchBarStyle = .minimal
+//        self.searchBar.showsCancelButton = true
         self.searchBar.placeholder = "Type a title or theme..."
         self.searchBar.layer.cornerRadius = 8.0
     }
@@ -91,10 +92,14 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
 // MARK: - Delegate
 extension SearchView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // if the text change and is zero chars means user used cross button
+        if searchText.count == 0 {
+            self.movies.removeAll()
+            self.tableView.reloadData()
+        }
         // omdbapi does exact matching and needs +3 characters input
         // for testing purposes i use "seven"
         if searchText.count < 5 { return }
         self.presenter?.perform(action: .textEntered(text: searchText))
     }
 }
-
