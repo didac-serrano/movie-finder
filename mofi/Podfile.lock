@@ -1,0 +1,16 @@
+PODS:
+  - ImageLoader (0.15.0)
+
+DEPENDENCIES:
+  - ImageLoader
+
+SPEC REPOS:
+  trunk:
+    - ImageLoader
+
+SPEC CHECKSUMS:
+  ImageLoader: e0635d52020d64dc7687e3a3b14dc53212ac0442
+
+PODFILE CHECKSUM: 5a6d307d334542fb11ca2bf7f698709933bb4047
+
+COCOAPODS: 1.9.2
