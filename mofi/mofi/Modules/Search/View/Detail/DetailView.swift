@@ -13,18 +13,30 @@ class DetailView: UIViewController, DetailViewProtocol {
     var presenter: SearchPresenterProtocol?
     private var info: MovieDetailEntity?
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var picture: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var subtitle: UILabel!
+    @IBOutlet weak var plot: UILabel!
+    
     //No additional init needed
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.alwaysBounceHorizontal = true
     }
     
     // MARK: - Setups
     func populate(_ state: DetailState) {
         switch state {
-        case .success(let entity):
-            self.info = entity
-//            self.tableView.reloadData()
+        case .success(let movie):
+            picture?.backgroundColor = .black
+            if let url = URL(string: movie.picture!) {
+                picture?.load.request(with: url)
+            }
+            name?.text = movie.title
+            subtitle?.text = movie.getSubtitle()
+            plot?.text = movie.getPlot()
 //            here
         case .error(let error):
             print(error) //TBD

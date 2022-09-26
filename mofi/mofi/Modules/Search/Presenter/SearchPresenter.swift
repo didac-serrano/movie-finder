@@ -35,7 +35,8 @@ class SearchPresenter: SearchPresenterProtocol, SearchInteractorOutputProtocol {
             ViewDispatcher.shared.execute {
                 self.createDetail(entity: entity)
             }
-        case .error(let error): print(error)
+        case .error(let error):
+            print(error)
 //            self.search?.populate(.error(error: error))
         }
     }
@@ -45,5 +46,6 @@ class SearchPresenter: SearchPresenterProtocol, SearchInteractorOutputProtocol {
         detail.presenter = self
         self.detail = detail
         wireframe?.navigate(to: .detail(detail))
+        detail.populate(.success(entity: entity))
     }
 }

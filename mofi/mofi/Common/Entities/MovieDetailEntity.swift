@@ -28,4 +28,12 @@ struct MovieDetailEntity: Decodable, Encodable {
     var plot: String
     var id: String
     var website: String?
+    
+    func getSubtitle() -> String {
+        return genre.capitalized + ". " + duration + ". Released in " + release + "."
+    }
+    
+    func getPlot() -> String {
+        return plot //hehe
+    }
 }
