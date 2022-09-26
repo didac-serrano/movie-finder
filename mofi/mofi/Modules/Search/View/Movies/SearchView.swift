@@ -102,6 +102,7 @@ extension SearchView: UISearchBarDelegate {
         }
         // omdbapi does exact matching and needs +3 characters input
         // for testing purposes i use "seven"
+        // for long titles "lord of the"
         if searchText.count < 5 { return }
         self.presenter?.perform(action: .textEntered(text: searchText))
     }

@@ -52,7 +52,7 @@ class SearchInteractor: SearchInteractorInputProtocol {
     }
     
     private func handleDetail(result: MovieDetailEntity) {
-//        self.presenter?.handle(.detailSuccess(result))
+        self.presenter?.handle(.detailSuccess(result))
     }
     
     private func handleError(error: Error) {

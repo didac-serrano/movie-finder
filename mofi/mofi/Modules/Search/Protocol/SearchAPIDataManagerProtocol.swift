@@ -13,7 +13,7 @@ typealias APIDataManagerMovieDetailResult = (Result<MovieDetailEntity, Error>)
 typealias APIDataManagerMovieResultBlock = (Result<SearchEntity, Error>) -> Void
 typealias APIDataManagerMovieDetailResultBlock = (Result<MovieDetailEntity, Error>) -> Void
 
-protocol SearchAPIDataManagerProtocol: class {
+protocol SearchAPIDataManagerProtocol: AnyObject {
     
     func requestMoviesTitle(input: String, resultBlock: @escaping APIDataManagerMovieResultBlock)
     func requestMovieDetail(movieId: String, resultBlock: @escaping APIDataManagerMovieDetailResultBlock)

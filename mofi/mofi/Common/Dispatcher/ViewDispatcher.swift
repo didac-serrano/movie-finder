@@ -17,7 +17,7 @@ final class ViewDispatcher {
     }
 }
 
-protocol ViewDipatcherProtocol: class {
+protocol ViewDipatcherProtocol: AnyObject {
     
     func execute(after: Double, action: @escaping () -> Void)
 }

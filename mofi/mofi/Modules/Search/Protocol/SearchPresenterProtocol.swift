@@ -12,10 +12,10 @@ enum SearchAction {
     case itemSelected(index: Int)
 }
 
-protocol SearchPresenterProtocol: class {
+protocol SearchPresenterProtocol: AnyObject {
     
     var search: SearchViewProtocol? { get set }
-//    var detail: SearchDetailViewProtocol? { get set }
+    var detail: DetailViewProtocol? { get set }
     
     var interactor: SearchInteractorInputProtocol? { get set }
     var wireframe: SearchWireframeProtocol? { get set }

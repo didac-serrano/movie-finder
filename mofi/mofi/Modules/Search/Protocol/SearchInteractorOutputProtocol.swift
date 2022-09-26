@@ -13,7 +13,7 @@ enum SearchInteractorResult {
     case error(_ error: String)
 }
 
-protocol SearchInteractorOutputProtocol: class {
+protocol SearchInteractorOutputProtocol: AnyObject {
     
     func handle(_ result: SearchInteractorResult)
 }

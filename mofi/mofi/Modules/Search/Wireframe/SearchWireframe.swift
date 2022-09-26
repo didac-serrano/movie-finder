@@ -30,18 +30,14 @@ class SearchWireframe: SearchWireframeProtocol {
         switch page {
         case .search:
             detail?.dismiss(animated: true, completion: nil)
-        case .detail:
-            pushDetail()
+            // not used atm detail is already dismissable
+        case .detail(let view):
+            pushDetail(detail: view)
         }
     }
     
-    private func pushDetail() {
-//        let detail = SearchDetailViewController()
-        let detail = UIViewController()
-//        detail.presenter = self.presenter
-//        presenter?.detail = detail
-//        self.detail = detail as UIViewController
-//        search.show(self.detail!, sender: self.search)
-        search.show(detail, sender: self.search)
+    private func pushDetail(detail: DetailView) {
+        self.detail = detail as UIViewController
+        search.show(self.detail!, sender: self.search)
     }
 }
