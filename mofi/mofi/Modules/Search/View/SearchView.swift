@@ -4,6 +4,7 @@
 //
 //  Created by Dídac Serrano i Segarra on 01/12/2021.
 //
+
 import UIKit
 import ImageLoader
 
