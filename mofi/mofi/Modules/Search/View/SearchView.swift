@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ImageLoader
 
 class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, SearchViewProtocol {
 
@@ -27,7 +28,6 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     // MARK: - Setups
     func searchBarSettings() {
         self.searchBar.searchBarStyle = .minimal
-//        self.searchBar.showsCancelButton = true
         self.searchBar.placeholder = "Type a title or theme..."
         self.searchBar.layer.cornerRadius = 8.0
     }
@@ -64,8 +64,10 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
         let movie = self.movies[indexPath.row]
-//        cell.picture?.kf.setImage(with: URL(string: movie.picture!))
-        cell.picture?.tintColor = .systemIndigo  // URL not implemented
+        cell.picture?.backgroundColor = .black
+        if let url = URL(string: movie.picture!) {
+            cell.picture?.load.request(with: url)
+        }
         cell.title?.text = movie.title
         cell.info?.text = movie.getInfo()
         cell.contentView.backgroundColor = .white
