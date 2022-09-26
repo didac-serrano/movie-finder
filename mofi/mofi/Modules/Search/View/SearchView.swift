@@ -35,7 +35,8 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     func tableSettings() {
         self.tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
         self.tableView.allowsSelection = true
-        self.tableView.rowHeight = 282
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 400
         self.tableView.separatorStyle = .none
     }
 
