@@ -80,6 +80,22 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         self.presenter?.perform(action: .itemSelected(index: indexPath.row))
     }
     
+    //Editing purposes
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            self.movies.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+//            here
+            self.presenter?.perform(action: .deleteSelected(index: indexPath.row))
+        }
+    }
+    
     // MARK: - RoomsViewProtocol
     func populate(_ state: SearchState) {
         switch state {
@@ -101,8 +117,7 @@ extension SearchView: UISearchBarDelegate {
             self.tableView.reloadData()
         }
         // omdbapi does exact matching and needs +3 characters input
-        // for testing purposes i use "seven"
-        // for long titles "lord of the"
+        // for long titles "lord of "
         if searchText.count < 5 { return }
         self.presenter?.perform(action: .textEntered(text: searchText))
     }

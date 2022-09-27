@@ -21,6 +21,7 @@ class SearchInteractor: SearchInteractorInputProtocol {
         switch job {
         case .requestMovies(let text): fetchMovies(text: text)
         case .requestMovieDetail(let index): fetchMovieDetail(index: index)
+        case .deleteMovie(let index): movies?.remove(at: index)
         }
     }
     

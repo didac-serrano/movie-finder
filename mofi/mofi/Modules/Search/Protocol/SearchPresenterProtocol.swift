@@ -10,6 +10,7 @@ import Foundation
 enum SearchAction {
     case textEntered(text: String)
     case itemSelected(index: Int)
+    case deleteSelected(index: Int)
 }
 
 protocol SearchPresenterProtocol: AnyObject {

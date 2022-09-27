@@ -35,6 +35,7 @@ class DetailView: UIViewController, DetailViewProtocol {
             name?.text = movie.title
             subtitle?.text = movie.getSubtitle()
             plot?.text = movie.getPlot()
+//            plot?.sizeToFit()
 //            here
         case .error(let error):
             print(error) //TBD

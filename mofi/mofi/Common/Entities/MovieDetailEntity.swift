@@ -30,7 +30,7 @@ struct MovieDetailEntity: Decodable, Encodable {
     var website: String?
     
     func getSubtitle() -> String {
-        return getDuration() + genre.capitalized + ". " +  " Released in " + release + "."
+        return getDuration() + genre.capitalized + ". " +  "\nReleased in " + release + "."
     }
     
     func getDuration() -> String {
@@ -42,6 +42,6 @@ struct MovieDetailEntity: Decodable, Encodable {
     }
     
     func getPlot() -> String {
-        return plot //hehe
+        return "Plot: " + plot
     }
 }
