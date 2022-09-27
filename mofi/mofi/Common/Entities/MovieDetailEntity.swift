@@ -30,7 +30,15 @@ struct MovieDetailEntity: Decodable, Encodable {
     var website: String?
     
     func getSubtitle() -> String {
-        return genre.capitalized + ". " + duration + ". Released in " + release + "."
+        return getDuration() + genre.capitalized + ". " +  " Released in " + release + "."
+    }
+    
+    func getDuration() -> String {
+        let clean = duration.replacingOccurrences(of: "N/A", with: "")
+        if clean == "" { return clean }
+        else {
+            return clean + ". "
+        }
     }
     
     func getPlot() -> String {
