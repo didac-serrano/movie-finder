@@ -43,19 +43,20 @@ class SearchView: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int
     {
-        var sections = 0
-        if self.movies.count > 0 {
-            sections = 1
-            self.tableView.backgroundView = nil
-        }
-        else {
-            let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-            noDataLabel.text = "No recent searches"
-            noDataLabel.textColor = UIColor.lightGray
-            noDataLabel.textAlignment = .center
-            self.tableView.backgroundView = noDataLabel
-        }
-        return sections
+//    ---> It breaks when last element is removed <---
+//        var sections = 0
+//        if self.movies.count > 0 {
+//            sections = 1
+//            self.tableView.backgroundView = nil
+//        }
+//        else {
+//            let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+//            noDataLabel.text = "No recent searches"
+//            noDataLabel.textColor = UIColor.lightGray
+//            noDataLabel.textAlignment = .center
+//            self.tableView.backgroundView = noDataLabel
+//        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
