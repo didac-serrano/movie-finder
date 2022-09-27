@@ -13,7 +13,6 @@ class DetailView: UIViewController, DetailViewProtocol {
     var presenter: SearchPresenterProtocol?
     private var info: MovieDetailEntity?
     
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var subtitle: UILabel!
@@ -23,7 +22,6 @@ class DetailView: UIViewController, DetailViewProtocol {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.alwaysBounceHorizontal = true
     }
     
     // MARK: - Setups
