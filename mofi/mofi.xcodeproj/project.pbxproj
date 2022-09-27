@@ -200,8 +200,8 @@
 		2BED9598275548D3001BED0B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2B337F4F28E219BA0083ED28 /* Movies */,
 				2B337F5028E219E30083ED28 /* Detail */,
+				2B337F4F28E219BA0083ED28 /* Movies */,
 			);
 			path = View;
 			sourceTree = "<group>";

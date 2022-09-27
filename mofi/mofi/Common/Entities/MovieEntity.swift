@@ -28,6 +28,11 @@ struct MovieEntity: Decodable, Encodable {
     var picture: String?
     
     func getInfo() -> String {
-        return type.rawValue.capitalized + " from " + year
+        return type.rawValue.capitalized + " from " + getYear()
+    }
+    
+    //unconcluded series appear like "2022-" which looks ugly :S
+    func getYear() -> String {
+        return String(year.prefix(4))
     }
 }

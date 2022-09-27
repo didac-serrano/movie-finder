@@ -21,6 +21,8 @@ class SearchPresenter: SearchPresenterProtocol, SearchInteractorOutputProtocol {
             interactor?.perform(.requestMovies(text: input))
         case .itemSelected(let index):
             interactor?.perform(.requestMovieDetail(index: index))
+        case .deleteSelected(let index):
+            interactor?.perform(.deleteMovie(index: index))
         }
     }
     

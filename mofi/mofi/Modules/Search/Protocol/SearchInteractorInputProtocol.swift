@@ -10,6 +10,7 @@ import Foundation
 enum SearchJob {
     case requestMovies(text: String)
     case requestMovieDetail(index: Int)
+    case deleteMovie(index: Int)
 }
 
 protocol SearchInteractorInputProtocol: AnyObject {
