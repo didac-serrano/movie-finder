@@ -9,10 +9,10 @@ import UIKit
 
 enum SearchPage {
     case search
-    case detail
+    case detail(_ view: DetailView)
 }
 
-protocol SearchWireframeProtocol: class {
+protocol SearchWireframeProtocol: AnyObject {
     
     var search: UIViewController! { get set }
     var detail: UIViewController? { get set }

@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2B0978E3276164FF007FFF65 /* SearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0978E2276164FF007FFF65 /* SearchEntity.swift */; };
+		2B337F5228E220200083ED28 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B337F5128E220200083ED28 /* DetailView.swift */; };
+		2B337F5428E2209B0083ED28 /* DetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B337F5328E2209B0083ED28 /* DetailViewProtocol.swift */; };
+		2B337F5628E224E90083ED28 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B337F5528E224E90083ED28 /* DetailView.xib */; };
 		2B448CA327543FD5008A9DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B448CA227543FD5008A9DD9 /* AppDelegate.swift */; };
 		2B448CAC27543FDB008A9DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B448CAB27543FDB008A9DD9 /* Assets.xcassets */; };
 		2B448CAF27543FDB008A9DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B448CAD27543FDB008A9DD9 /* LaunchScreen.storyboard */; };
@@ -34,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		2B0978E2276164FF007FFF65 /* SearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEntity.swift; sourceTree = "<group>"; };
+		2B337F5128E220200083ED28 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2B337F5328E2209B0083ED28 /* DetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewProtocol.swift; sourceTree = "<group>"; };
+		2B337F5528E224E90083ED28 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		2B448C9F27543FD5008A9DD9 /* mofi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mofi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B448CA227543FD5008A9DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B448CAB27543FDB008A9DD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +80,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B337F4F28E219BA0083ED28 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				2BED95EB2757DACA001BED0B /* Cell */,
+				2BED95F32757F451001BED0B /* SearchView.swift */,
+				2BED95E82757D63F001BED0B /* SearchView.xib */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		2B337F5028E219E30083ED28 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2B337F5128E220200083ED28 /* DetailView.swift */,
+				2B337F5528E224E90083ED28 /* DetailView.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		2B448C9627543FD5008A9DD9 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +188,7 @@
 			children = (
 				2BED95D52756C9E9001BED0B /* SearchWireframeProtocol.swift */,
 				2BED95D22756C7D3001BED0B /* SearchViewProtocol.swift */,
+				2B337F5328E2209B0083ED28 /* DetailViewProtocol.swift */,
 				2BED95CF2756B4A6001BED0B /* SearchPresenterProtocol.swift */,
 				2BED95C727569E01001BED0B /* SearchInteractorOutputProtocol.swift */,
 				2BED95C12756981C001BED0B /* SearchInteractorInputProtocol.swift */,
@@ -174,9 +200,8 @@
 		2BED9598275548D3001BED0B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2BED95EB2757DACA001BED0B /* Cell */,
-				2BED95F32757F451001BED0B /* SearchView.swift */,
-				2BED95E82757D63F001BED0B /* SearchView.xib */,
+				2B337F4F28E219BA0083ED28 /* Movies */,
+				2B337F5028E219E30083ED28 /* Detail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,7 +265,6 @@
 				6A716266569EB60431975C21 /* Pods-mofi.debug.xcconfig */,
 				F3D33A4E40091537B08111DD /* Pods-mofi.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -315,6 +339,7 @@
 				2B448CAC27543FDB008A9DD9 /* Assets.xcassets in Resources */,
 				2BED95ED2757DAF1001BED0B /* MovieTableViewCell.xib in Resources */,
 				2BED95E92757D63F001BED0B /* SearchView.xib in Resources */,
+				2B337F5628E224E90083ED28 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,8 +408,10 @@
 				2BED959B27554E3C001BED0B /* SearchAPIDataManager.swift in Sources */,
 				2B448CA327543FD5008A9DD9 /* AppDelegate.swift in Sources */,
 				2BED95C22756981C001BED0B /* SearchInteractorInputProtocol.swift in Sources */,
+				2B337F5228E220200083ED28 /* DetailView.swift in Sources */,
 				2BED95D32756C7D3001BED0B /* SearchViewProtocol.swift in Sources */,
 				2BED95AC2755623C001BED0B /* ViewDispatcher.swift in Sources */,
+				2B337F5428E2209B0083ED28 /* DetailViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ enum SearchJob {
     case requestMovieDetail(index: Int)
 }
 
-protocol SearchInteractorInputProtocol: class {
+protocol SearchInteractorInputProtocol: AnyObject {
     
     var selectedMovie: MovieEntity? { get set }
 
