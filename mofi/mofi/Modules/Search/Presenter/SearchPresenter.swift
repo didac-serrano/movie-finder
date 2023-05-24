@@ -29,12 +29,12 @@ class SearchPresenter: SearchPresenterProtocol, SearchInteractorOutputProtocol {
     func handle(_ result: SearchInteractorResult) {
         switch result {
         case .moviesSuccess(let entity):
-            ViewDispatcher.shared.execute {
+            DispatchQueue.main.async {
                 self.search?.populate(.success(entity: entity))
             }
         case .detailSuccess(let entity):
             print(entity)
-            ViewDispatcher.shared.execute {
+            DispatchQueue.main.async {
                 self.createDetail(entity: entity)
             }
         case .error(let error):
